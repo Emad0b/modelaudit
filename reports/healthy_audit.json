@@ -1,0 +1,50 @@
+{
+  "decision": "PASS_WITHIN_SCOPE",
+  "metrics": {
+    "auc": 0.8862873002158627,
+    "brier": 0.1375883239326569,
+    "ece": 0.02626588123259988,
+    "prevalence": 0.49416666666666664,
+    "baseline_brier": 0.2500354166666666
+  },
+  "findings": [],
+  "drift": [
+    {
+      "feature": "x0",
+      "ks": 0.03571428571428571,
+      "p": 0.22910167426902592,
+      "bh_q": 0.4291874580767797
+    },
+    {
+      "feature": "x1",
+      "ks": 0.03380952380952381,
+      "p": 0.2861249720511865,
+      "bh_q": 0.4291874580767797
+    },
+    {
+      "feature": "x2",
+      "ks": 0.024523809523809524,
+      "p": 0.6842911457515867,
+      "bh_q": 0.6842911457515867
+    }
+  ],
+  "subgroups": [
+    {
+      "group": "A",
+      "n": 603,
+      "prevalence": 0.48756218905472637,
+      "brier": 0.13291840808087999,
+      "auc": 0.894954098144112,
+      "tpr": 0.8061224489795918
+    },
+    {
+      "group": "B",
+      "n": 597,
+      "prevalence": 0.5008375209380235,
+      "brier": 0.1423051736120899,
+      "auc": 0.878498799129088,
+      "tpr": 0.782608695652174
+    }
+  ],
+  "scope": "Heuristic independent checks; metadata must be trustworthy. No legal compliance certification or proof of fairness."
+}

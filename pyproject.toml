@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modelaudit"
+version = "0.1.0"
+description = "Independent validation with leakage, calibration, drift and subgroup diagnostics."
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.12,<2", "scikit-learn>=1.5,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+modelaudit = "modelaudit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

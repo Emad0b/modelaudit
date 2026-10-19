@@ -1,0 +1,74 @@
+{
+  "decision": "REJECT",
+  "metrics": {
+    "auc": 1.0,
+    "brier": 9.317452286414121e-08,
+    "ece": 0.00021732705960241384,
+    "prevalence": 0.4825,
+    "baseline_brier": 0.25031875000000003
+  },
+  "findings": [
+    {
+      "code": "POST_OUTCOME_FEATURE",
+      "severity": "FAIL",
+      "detail": [
+        "x3"
+      ]
+    },
+    {
+      "code": "TEMPORAL_OVERLAP",
+      "severity": "FAIL",
+      "detail": "Training observations are not all before test observations"
+    },
+    {
+      "code": "SUSPICIOUSLY_HIGH_AUC",
+      "severity": "WARN",
+      "detail": "Investigate leakage; high AUC alone does not prove it"
+    }
+  ],
+  "drift": [
+    {
+      "feature": "x0",
+      "ks": 0.01619047619047619,
+      "p": 0.9779486791977356,
+      "bh_q": 0.9779486791977356
+    },
+    {
+      "feature": "x1",
+      "ks": 0.04119047619047619,
+      "p": 0.11265792034125409,
+      "bh_q": 0.45063168136501636
+    },
+    {
+      "feature": "x2",
+      "ks": 0.035,
+      "p": 0.24939693948523017,
+      "bh_q": 0.49879387897046035
+    },
+    {
+      "feature": "x3",
+      "ks": 0.025,
+      "p": 0.6610469846839861,
+      "bh_q": 0.8813959795786482
+    }
+  ],
+  "subgroups": [
+    {
+      "group": "A",
+      "n": 615,
+      "prevalence": 0.4894308943089431,
+      "brier": 9.407489582558487e-08,
+      "auc": 1.0,
+      "tpr": 1.0
+    },
+    {
+      "group": "B",
+      "n": 585,
+      "prevalence": 0.4752136752136752,
+      "brier": 9.222797693031585e-08,
+      "auc": 1.0,
+      "tpr": 1.0
+    }
+  ],
+  "scope": "Heuristic independent checks; metadata must be trustworthy. No legal compliance certification or proof of fairness."
+}
