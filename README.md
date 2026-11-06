@@ -1,5 +1,7 @@
 # ModelAudit
 
+ModelAudit helps you decide whether to trust the results reported for a model that predicts risk. Use it to check for mistakes such as training data leaking into the test, unreliable probabilities, or weaker results for specific groups.
+
 Independent validation with leakage, calibration, drift and subgroup diagnostics.
 
 Independently evaluate a claimed binary risk model and generate a review decision that can reject impressive but invalid results.
